@@ -12,7 +12,7 @@ import json
 import winsound
 
 
-email={'gaurav':'gkhadka185@gmail.com'}
+email={'gaurav':'yourfreindemail@email.com'}
 
 engine=pyttsx3.init()
 voices=engine.getProperty('voices')
@@ -27,8 +27,8 @@ def sendemail(to,content):
     server=smtplib.SMTP('smtp.gmail.com',587)
     server.ehlo()
     server.starttls()
-    server.login('nikita.khadka.980@gmail.com','hruxlxpvowpsntcv')
-    server.sendmail('nikita.khadka.980@gmail.com',to,content)
+    server.login('dummy@email.com','hruxlxpvowpsntcv')
+    server.sendmail('dummy@email.com',to,content)
     server.close()
 
 
@@ -141,14 +141,6 @@ def runcommand():
 
 
         
-
-
-
-
-
-
-
-
 def greeting():
     '''This function greet the user as soon as the program starts'''
 
@@ -165,7 +157,7 @@ def greeting():
 
 if __name__=='__main__':
     greeting()
-    
-    runcommand()
+    while True:
+        runcommand()
     
     
